@@ -5,12 +5,37 @@ import Layout from '../layouts/Layout.astro';
 
 
 <Layout title="Frosty Flavors - Contact">
-    <h1>Contact</h1>  
+    <div class="title-wrapper">
+		<h1 class="title heading-text">Contact Page</h1>
+	</div>
+	<main>
+		
+		
+	</main>
 </Layout>
 
 <style>
-	h1 {
-		font-size: 2rem;
-		color: yellow;
+	main {
+		display: grid;
+		place-items: center;
+		margin-bottom: 5rem;
+	}
+	.title-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 8rem;
+	}
+	.title {
+		font-style: italic;
+		font-weight: bolder;
+		text-decoration: underline;
+		text-decoration-color: var(--window);
+		-moz-text-decoration-color: var(--window);
+		background: linear-gradient(60deg, var(--clr01), var(--clr02), var(--clr03), var(--clr04), var(--clr05), var(--clr06));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+		text-shadow: var(--window) 0px 0px 10px;
 	}
 </style>

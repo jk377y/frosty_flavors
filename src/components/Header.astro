@@ -3,7 +3,7 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 ---
 
 <header>
-	<a href="/" class="title"><div>Frosty Flavors</div></a>
+	<a href="/" class="header-title"><div>Frosty Flavors</div></a>
 	<nav class="navbar">
 		<ul>
 			<li><a href="/"><img class="nav-icons" src="/images/icons/home.png" /></a></li>
@@ -39,7 +39,7 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 	.nav-icons:hover {
 		transform: scale(1.2);
 	}
-	.title {
+	.header-title {
         font-family: 'Rubik Dirt', cursive;
 		text-align: center;
 		font-size: 2.25rem;
@@ -53,22 +53,22 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 		cursor: pointer;
 		transition: var(--animate);
 	}
-	.title:hover {
+	.header-title:hover {
 		transform: scale(1.05);
 	}
 	/* Media Queries */
 	@media only screen and (min-width: 425px) {
-		.title {
+		.header-title {
 			font-size: 2.5rem;
 		}
 	}
 	@media only screen and (min-width: 500px) {
-		.title {
+		.header-title {
 			font-size: 3rem;
 		}
 	}
 	@media only screen and (min-width: 769px) {
-		.title {
+		.header-title {
 			font-size: 3.5rem;
 		}
 		.navbar {
@@ -76,12 +76,12 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 		}
 	}
 	@media only screen and (min-width: 1024px) {
-		.title {
+		.header-title {
 			font-size: 4rem;
 		}
 	}
 	@media only screen and (min-width: 1200px) {
-		.title {
+		.header-title {
 			font-size: 5rem;
 		}
 	}
