@@ -1,5 +1,7 @@
 # Frosty Flavors
 
+IN PROGRESS...
+
 Landing page for local flavored ice/snow cone truck. Will offer mobile ordering and payment processing.
 
 
