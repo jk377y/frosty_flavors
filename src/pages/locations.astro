@@ -1,16 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-
-
 <Layout title="Frosty Flavors - Locations">
-    <div class="title-wrapper">
+	<div class="title-wrapper">
 		<h1 class="title heading-text">Locations Page</h1>
 	</div>
 	<main>
-		
-		
+		<div class="map-wrapper">
+			<iframe
+				class="map"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1724.784019622929!2d-95.45741873176239!3d30.163763580910423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864736ea66bbf6d7%3A0x7b3321b4a9cecfbb!2sThe%20Woodlands%20Mall!5e0!3m2!1sen!2sus!4v1689535172961!5m2!1sen!2sus"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
 	</main>
 </Layout>
 
@@ -33,9 +38,24 @@ import Layout from '../layouts/Layout.astro';
 		text-decoration-color: var(--window);
 		-moz-text-decoration-color: var(--window);
 		background: linear-gradient(60deg, var(--clr01), var(--clr02), var(--clr03), var(--clr04), var(--clr05), var(--clr06));
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
 		text-shadow: var(--window) 0px 0px 10px;
+	}
+	.map-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 60vh;
+	}
+	.map {
+		width: 80%;
+		max-width: 1600px;
+		height: 100%;
+		max-height: 1200px;
+		border-radius: 35px;
+		box-shadow: 0px 0px 10px var(--window);
 	}
 </style>
