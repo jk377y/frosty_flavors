@@ -3,14 +3,7 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 ---
 
 <header>
-	<a href="/">
-		<div class="logo-parent">
-			<img src="/images/snowcones.avif" class="logo" />
-		</div>
-	</a>
-
-	<label class="title">Frosty Flavors</label>
-
+	<a href="/" class="title"><div>Frosty Flavors</div></a>
 	<nav class="navbar">
 		<ul>
 			<li><a href="/"><img class="nav-icons" src="/images/icons/home.png" /></a></li>
@@ -22,10 +15,7 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 	<MobileHamburgerNav client:load />
 </header>
 
-<script></script>
-
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 	header {
 		background-color: var(--window);
 		padding: 1rem;
@@ -33,26 +23,6 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-	.logo-parent {
-		position: relative;
-		overflow: hidden;
-		cursor: pointer;
-		border-radius: 50%;
-		height: 75px;
-		width: 75px;
-		transition: var(--animate);
-	}
-	.logo {
-		width: 100%;
-		height: 100%;
-		transition: var(--animate);
-	}
-	.logo-parent:hover {
-		box-shadow: var(--shadow);
-	}
-	.logo-parent:hover .logo {
-		transform: scale(1.2);
 	}
 	.navbar {
 		display: none;
@@ -63,7 +33,7 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 	.nav-icons {
 		height: 35px;
 		width: 35px;
-		transition: var(--animate);
+		
 		margin: 0 1rem;
 	}
 	.nav-icons:hover {
@@ -72,28 +42,30 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 	.title {
         font-family: 'Rubik Dirt', cursive;
 		text-align: center;
-		font-size: 1.5rem;
+		font-size: 2.25rem;
 		font-style: italic;
-        background-image: linear-gradient(60deg, var(--clr01), var(--clr02), var(--clr03), var(--clr04), var(--clr05), var(--clr06));
+        background: linear-gradient(60deg, var(--clr01), var(--clr02), var(--clr03), var(--clr04), var(--clr05), var(--clr06));
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+		/* text-shadow: var(--window) 0px 0px 10px; */
 		margin: 0 auto;
+		cursor: pointer;
+		transition: var(--animate);
+	}
+	.title:hover {
+		transform: scale(1.05);
 	}
 	/* Media Queries */
 	@media only screen and (min-width: 425px) {
 		.title {
-			font-size: 2rem;
+			font-size: 2.5rem;
 		}
 	}
 	@media only screen and (min-width: 500px) {
 		.title {
 			font-size: 3rem;
 		}
-        .logo-parent {
-            height: 125px;
-            width: 125px;
-	    }
 	}
 	@media only screen and (min-width: 769px) {
 		.title {
@@ -101,16 +73,6 @@ import MobileHamburgerNav from "./MobileHamburgerNav/MobileHamburgerNav";
 		}
 		.navbar {
 			display: flex;
-		}
-	}
-	@media only screen and (min-width: 800px) {
-		.title {
-			font-size: 3rem;
-		}
-	}
-    @media only screen and (min-width: 880px) {
-		.title {
-			font-size: 3.25rem;
 		}
 	}
 	@media only screen and (min-width: 1024px) {

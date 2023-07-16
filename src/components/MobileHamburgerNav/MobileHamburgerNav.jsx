@@ -27,6 +27,8 @@ const MobileHamburgerNav = () => {
 						<li><a href="/menu">Menu</a></li>
 						<li><a href="/cart">Cart</a></li>
 						<li><a href="/contact">Contact</a></li>
+						<li><a href="/locations">Locations</a></li>
+						<li><a href="/about">About Us</a></li>
 					</ul>
 				</div>
 			</div>

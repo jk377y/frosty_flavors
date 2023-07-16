@@ -1,27 +1,97 @@
 ---
 export interface Props {
+	img: string;
 	title: string;
-	body: string;
-	href: string;
+	description: string;
+	price: string;
 }
 
-const { href, title, body } = Astro.props;
+const { img, title, description, price } = Astro.props;
 ---
 
-
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-
+<div class="item-bg">
+	<div class="item-card">
+		<img src=`${img}` alt=`${title} picture` />
+		<h3 class="heading-text">{title}</h3>
+		<p class="body-text">{description}</p>
+		<p class="body-text">{price}</p>
+		<div class="qtyAdjust">
+			<button class="addBtn">+</button>
+			<label>Qty: [ <span id="item-qty"></span> ]</label>
+			<button class="subBtn">-</button>
+		</div>
+	</div>
+</div>
 
 <style>
-	
+	.item-bg {
+		margin: 1rem;
+		padding: 0.25rem;
+		border-radius: 10%;
+		background: linear-gradient(45deg, var(--clr01), var(--clr02), var(--clr03), var(--clr04), var(--clr05), var(--clr06));
+	}
+	.item-card {
+		z-index: 1;
+		background-color: var(--clr03);
+		border-radius: 10%;
+		width: 300px;
+		height: 350px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	img {
+		width: 200px;
+		height: 225px;
+		object-fit: fit-content;
+		border-radius: 10%;
+		padding: 0.5rem;
+	}
+	h3,
+	p {
+		text-align: center;
+		color: var(--clr06);
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	p {
+		font-size: 1rem;
+	}
+	.qtyAdjust {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.addBtn {
+		background-color: var(--clr04);
+		border: 2px solid var(--clr04);
+	}
+	.subBtn {
+		background-color: var(--clr01);
+		border: 2px solid var(--clr01);
+	}
+	.addBtn,
+	.subBtn {
+		font-size: 1.5rem;
+		color: black;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		transition: var(--animate);
+	}
+	.addBtn:hover,
+	.subBtn:hover {
+		cursor: pointer;
+		border: 2px solid var(--clr05);
+	}
+	label {
+		color: var(--clr05);
+		font-size: 1.25rem;
+	}
+	#item-qty {
+		color: black;
+		font-size: 1rem;
+	}
 </style>

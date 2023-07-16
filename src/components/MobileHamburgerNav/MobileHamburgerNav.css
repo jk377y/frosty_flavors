@@ -54,13 +54,13 @@
 	top: 0;
 	transform: rotate(45deg);
 	rotate: 180deg;
-	background-color: red;
+	background-color: var(--clr03);
 }
 .hamburgerBtn.collapsed .hamburger:after {
 	bottom: 0;
 	transform: rotate(-45deg);
 	rotate: -180deg;
-	background-color: red;
+	background-color: var(--clr03);
 }
 .nav-mobile-menu-div {
 	display: flex;
@@ -78,18 +78,19 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 150px 0 0 0;
+	margin: 125px 0 0 0;
 }
 .nav-mobile-menu div {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .logo {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	box-shadow: var(--shadow);
 }
 .nav-mobile-menu ul li {
 	margin: 20px 0;
@@ -98,10 +99,10 @@
 .nav-mobile-menu ul li a {
 	font-size: 2rem;
 	text-decoration: none;
-	color: var(--clr03);
+	color: var(--clr05);
 }
 .nav-mobile-menu a:hover {
-	color: var(--clr03);
+	color: var(--clr04);
 }
 .show {
 	right: 0;
